@@ -1,23 +1,22 @@
-<snippet>
-  <content><![CDATA[
-# ${1:Project Name}
-TODO: Write a project description
-## Installation
-TODO: Describe the installation process
-## Usage
-TODO: Write usage instructions
-## Contributing
-1. Fork it!
-2. Create your feature branch: `git checkout -b my-new-feature`
-3. Commit your changes: `git commit -am 'Add some feature'`
-4. Push to the branch: `git push origin my-new-feature`
-5. Submit a pull request :D
-## History
-TODO: Write history
-## Credits
-TODO: Write credits
-## License
-TODO: Write license
-]]></content>
-  <tabTrigger>readme</tabTrigger>
-</snippet>
+# Laboratory work nr.1 by Sclifos Corina
+
+TODO: 
+* Get familiar with various HTML elements and understand how they should be used;
+* Understand CSS selectors and specificity;
+* Play with Twitter Bootstrap;
+
+## What I did
+
+1. I created a home page which is index.html
+2. I created a navbar and some aditionaly pages 
+
+## What I used 
+
+1. HTML to create the structure of the pages.
+2. Bootstap, I used online butstrap by inserting a link in code. It is the same bootstrap with the same packages.
+
+## How I used bootstrap
+
+I don't make more stylsation, I just use classes to create boxes, buttons, navbar etc. Also I used the grid system, home page are separated in 3 equals parts (each have 4 col), the rest pages are the seme separeted in 3 parts but they are not equal (2-8-2 col). I don't created the css file because I don't have so much cod, just some lines and I think it is not necessary to separate file. The pages are responsive, I did this using he following <meta> viewport element in all your web pages.
+
+
