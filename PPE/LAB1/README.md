@@ -3,54 +3,28 @@
 # Laboratory work nr.1
 
 ## Executed Tasks:
-  - ####Mandatory Tasks:
+ #### Mandatory Tasks:
     - Create a Windows application
     - Choose a _Programming Style Guideline_ that you'll follow
     - Add 2 buttons to window: one with default styles, one with custom styles (size, background, text color, font family, font size)
     - Add 2 text elements to window: one with default styles, one with custom styles (size, background, text color, font family, font size)
     -On windows resize, one of the texts should "reflow" and be in window's center (vertically and horizontally)
   
-##PSG - The hardest part
+## PSG - The hardest part
 
-I am going to make small changes into PSG 
+#### Comments
+My line of comment is written above the line of code , and between a line of code and a line of comment there is always a blank line left.A comment must start with an upper case.
 
-####Comments
-```
-    //Flag for checking
-    int font = 1;
-    //Declare Windows procedure
-    LRESULT CALLBACK WindowProcedure (HWND, UINT, WPARAM, LPARAM);
-```
+#### Case Blocks
 
-As you can see , my line of comment is written above the line of code , and between a line of code and a line of comment there is always a blank line left.A comment must start with an upper case.
+The case statement should have the curly braces after any statement.
 
-####Case Blocks
-
-The case statement should have the following form:
-
-```
-   case do:
-      {
-      
-      }
-      
-    break;
-```
-
-####Curly Braces
+#### Curly Braces
 
 Position of curly braces after any statement ,class.
-
-```
-   for (int i ; i < 0 ; i++ )
-    {
-  
-    }
-```  
-
 I still need a lot of , to get used to it in order to write everything according to the PSG
 
-##Result
+## Result
 
 1. Text Editor on the up for inputing the message
 2. List Box on the down for outputing the message
