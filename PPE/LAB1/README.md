@@ -4,6 +4,7 @@
 
 ## Executed Tasks:
  #### Mandatory Tasks:
+ 
     - Create a Windows application
     - Choose a _Programming Style Guideline_ that you'll follow
     - Add 2 buttons to window: one with default styles, one with custom styles (size, background, text color, font family, font size)
@@ -37,6 +38,6 @@ I still need a lot of , to get used to it in order to write everything according
 9. There are 3 behaviors for Minimize/Maximize/Close button
 10. Added 1 static text with created font and colors on a changed main window background color
 
-##Conclusion
+## Conclusion
 
 This laboratory work was a difficult challenge for me since  Win32 API was new for me. Working with the messages and manipulating the parameters helped me to create a window and some child elements . Also this experience gave me an image of Windows API, and how it is structured, even if it didn't covered any advanced topics.
