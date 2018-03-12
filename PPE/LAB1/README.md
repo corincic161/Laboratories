@@ -4,13 +4,12 @@
 
 ## Executed Tasks:
  #### Mandatory Tasks:
- 
-    - Create a Windows application
-    - Choose a _Programming Style Guideline_ that you'll follow
-    - Add 2 buttons to window: one with default styles, one with custom styles (size, background, text color, font family, font size)
-    - Add 2 text elements to window: one with default styles, one with custom styles (size, background, text color, font family, font size)
-    -On windows resize, one of the texts should "reflow" and be in window's center (vertically and horizontally)
-  
+      1.Create a Windows application
+      2.Choose a _Programming Style Guideline_ that you'll follow
+      3. Add 2 buttons to window: one with default styles, one with custom styles (size, background, text color, font family, font size)
+      4. Add 2 text elements to window: one with default styles, one with custom styles (size, background, text color, font family, font size)
+      55On windows resize, one of the texts should "reflow" and be in window's center (vertically and horizontally)
+
 ## PSG - The hardest part
 
 #### Comments
