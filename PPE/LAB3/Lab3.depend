@@ -1,0 +1,43 @@
+# depslib dependency file v1.0
+1401151550 source:c:\users\id1mk_000\desktop\wp_lab_3\main.cpp
+	<tchar.h>
+	<windows.h>
+	<windowsx.h>
+	"resource.h"
+	<string.h>
+	<iostream>
+	<stdio.h>
+
+1401143997 c:\users\id1mk_000\desktop\wp_lab_3\resource.h
+
+1401144244 source:c:\users\id1mk_000\desktop\wp_lab_3\resource.rc
+	"resource.h"
+
+1401144244 source:c:\users\id1mk_000\desktop\git_\wp_lab_3\resource.rc
+	"resource.h"
+
+1401143997 c:\users\id1mk_000\desktop\git_\wp_lab_3\resource.h
+
+1401185210 source:c:\users\id1mk_000\desktop\git_\wp_lab_3\main.cpp
+	<tchar.h>
+	<windows.h>
+	<windowsx.h>
+	"resource.h"
+	<string.h>
+	<iostream>
+	<stdio.h>
+
+1523912229 source:c:\users\user\desktop\ppe\lab3\main.cpp
+	<tchar.h>
+	<windows.h>
+	<windowsx.h>
+	"resource.h"
+	<string.h>
+	<iostream>
+	<stdio.h>
+
+1403182472 c:\users\user\desktop\ppe\lab3\resource.h
+
+1403182472 source:c:\users\user\desktop\ppe\lab3\resource.rc
+	"resource.h"
+

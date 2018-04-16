@@ -1,0 +1,12 @@
+#include "resource.h"
+
+IDI_ICON ICON DISCARDABLE "icon.ico"
+
+IDM_MENU MENU DISCARDABLE
+BEGIN
+    POPUP "&File"
+    BEGIN
+        MENUITEM "&New\tCtrl+N", ID_CLEAR
+        MENUITEM "&Exit\tAlt+F4", ID_EXIT
+    END
+END
