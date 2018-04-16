@@ -1,11 +1,35 @@
-WINDOWS PROGRAMMING Laboratory Work #3
-======================================
+# Windows Programming
+#### student gr. FAF-161: Sclifos Corina
+# Laboratory Work nr. 3 at PPE
 
-Basics of Working with Mouse. GDI Primitives. Bezier Curve.
------------------------------------------------------------
-<br>
-##Completed Tasks
-######Laboratory Work is done in Code::Blocks IDE
+## Contents
+* Mouse
+* Device context
+* GDI Primitives
+  * Line
+  * Curve
+  * Plane
+  * Bitmap image
+* Bezier curve
+
+## Mandatory Objectives
+* Draw few lines of different colors and weights
+* Draw a Bezier curve
+* Draw few plane objects (ex. circle, square, pie, polygon...) of different colors, weights, filled and not
+* Draw 2 different objects using mouse
+
+## Objectives With Points
+* Draw a custom bitmap image `(1 pt)`
+* Add a switch (button, select list...) that will change mouse ability to draw objects `(2 pt)`
+* Draw a Bezier curve using mouse `(1 pt)`
+* Fill an object with a gradient `(1 pt)`
+* Delete objects using mouse clicking `(2 pt)`
+* Use mouse as an eraser of:
+  * a fixed width `(1 pt)`
+  * a adjustable width `(2 pt)`
+* Zoom in and out application working area using keyboard `(2 pt)`
+
+## What I did
 
   - **Draw few lines of different colors and weights**
 
@@ -32,5 +56,5 @@ The bitmap image is drawn in Adobe Photoshop and has the resolution 20x170. The 
 There is a group-box of radiocheck buttons for choosing desired color, made with `WS_GROUP` style.
 Also there are several push buttons that allows the user to choose the desired tool to draw (paint).
 
-###Program Overview
-![overview](https://raw.githubusercontent.com/TUM-FAF/FAF-121-Gira-Dumitru/master/WP/WP_LAB_3/work.gif)
+## Image
+https://github.com/corincic161/Laboratories/blob/master/PPE/LAB3/img.jpg
