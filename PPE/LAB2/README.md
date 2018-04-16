@@ -1,6 +1,6 @@
 # Windows Programming
 #### student gr. FAF-161: Sclifos Corina
-# Laboratory Work #2 at PPE
+# Laboratory Work nr. 2 at PPE
 
 ## Contents
 
