@@ -1,0 +1,35 @@
+# depslib dependency file v1.0
+1399362176 source:c:\users\id1mk_000\desktop\wp_lab_2\main.cpp
+	<tchar.h>
+	<windows.h>
+	"dlg.h"
+	<stdlib.h>
+	<time.h>
+	<iostream>
+	<stdio.h>
+	<string.h>
+	<algorithm>
+
+1398781840 source:c:\users\id1mk_000\desktop\wp_lab_2\dlg.rc
+	"dlg.h"
+	<windows.h>
+
+1399069056 c:\users\id1mk_000\desktop\wp_lab_2\dlg.h
+
+1523907564 source:c:\users\user\desktop\ppe\lab2\main.cpp
+	<tchar.h>
+	<windows.h>
+	"dlg.h"
+	<stdlib.h>
+	<time.h>
+	<iostream>
+	<stdio.h>
+	<string.h>
+	<algorithm>
+
+1403182472 c:\users\user\desktop\ppe\lab2\dlg.h
+
+1523906587 source:c:\users\user\desktop\ppe\lab2\dlg.rc
+	"dlg.h"
+	<windows.h>
+
