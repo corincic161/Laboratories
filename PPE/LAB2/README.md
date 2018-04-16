@@ -53,4 +53,5 @@ A custom cursor and icon were added in the main folder. Then they were declared 
 and `ID_CURSOR CURSOR DISCARDABLE "cursor.cur"`. Also some of windowclass fields were changed `hIcon, hIconSm, hCursor` .
 
 ## Image
+https://github.com/corincic161/Laboratories/blob/master/PPE/LAB2/SCREEN.JPG
 
