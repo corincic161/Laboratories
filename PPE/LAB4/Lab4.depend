@@ -1,0 +1,33 @@
+# depslib dependency file v1.0
+1401178659 source:d:\university\utm\semestrul iv\windows_programming\lab#4\main.cpp
+	"Ball.h"
+
+1400028464 d:\university\utm\semestrul iv\windows_programming\lab#4\ball.h
+	<windows.h>
+	<iostream>
+	<time.h>
+	<vector>
+	<stdlib.h>
+	<stdio.h>
+	<mmsystem.h>
+	<math.h>
+
+1401178655 source:d:\university\utm\semestrul iv\windows_programming\lab#4\src\ball.cpp
+	"../Ball.h"
+
+1403117792 source:c:\users\user\downloads\faf-121-gaitur-iurie-master\wp\lab#4\main.cpp
+	"Ball.h"
+
+1403117792 c:\users\user\downloads\faf-121-gaitur-iurie-master\wp\lab#4\ball.h
+	<windows.h>
+	<iostream>
+	<time.h>
+	<vector>
+	<stdlib.h>
+	<stdio.h>
+	<mmsystem.h>
+	<math.h>
+
+1403117792 source:c:\users\user\downloads\faf-121-gaitur-iurie-master\wp\lab#4\src\ball.cpp
+	"../Ball.h"
+
