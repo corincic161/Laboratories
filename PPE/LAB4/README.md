@@ -32,4 +32,4 @@ Also the balls will ricochet from the walls. The bottom wall is considered to be
 
 
 ## Screenshots
-https://github.com/corincic161/Laboratories/blob/master/PPE/LAB4/screen.png
+https://github.com/corincic161/Laboratories/blob/master/PPE/LAB4/img.png
