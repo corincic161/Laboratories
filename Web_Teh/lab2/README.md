@@ -1,24 +1,22 @@
-# README
+# Laboratory work nr.2 by Sclifos Corina
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+TODO: 
+* Integrate HTML template from lab#1 into your web application;
+* The application should have more that one page(route);
 
-Things you may want to cover:
+## What I used 
 
-* Ruby version
+1. To create the demo application, I will first make a project folder on my Desktop, go to that folder, and run rails new rgdemo
+2. The MVC architecture
 
-* System dependencies
+## MVC
 
-* Configuration
+* The View provides the interaction that the user sees (typically, a web page). The view components provide data to the user and send actions to the Controller for manipulating data.
+* The Model defines the data for the application (typically, the data is stored in a database).
+* The controller provides the interface between the View and the Model.
 
-* Database creation
+https://rails-girls-chisinau.gitbooks.io/course-guides/content/day_1/day_1_screenshots/mvc_high_level_diagram.png
 
-* Database initialization
 
-* How to run the test suite
 
-* Services (job queues, cache servers, search engines, etc.)
 
-* Deployment instructions
-
-* ...
