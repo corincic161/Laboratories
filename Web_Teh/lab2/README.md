@@ -16,6 +16,11 @@ TODO:
 * The controller provides the interface between the View and the Model.
 <img src="img/mvc_high_level_diagram.png" alt="Logo">
 
+## Creating a static page
+1. Add a route
+2. Add an action to the controller
+3. Create a view
+
 
 
 
