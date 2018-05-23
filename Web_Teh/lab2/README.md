@@ -14,8 +14,7 @@ TODO:
 * The View provides the interaction that the user sees (typically, a web page). The view components provide data to the user and send actions to the Controller for manipulating data.
 * The Model defines the data for the application (typically, the data is stored in a database).
 * The controller provides the interface between the View and the Model.
-![alt text](https://rails-girls-chisinau.gitbooks.io/course-guides/content/day_1/day_1_screenshots/mvc_high_level_diagram.png)
-
+<img src="img/mvc_high_level_diagram.png" alt="Logo">
 
 
 
