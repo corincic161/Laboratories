@@ -1,0 +1,292 @@
+Started GET "/" for 127.0.0.1 at 2018-05-23 00:38:32 +0300
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /home/user/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/railties-5.2.0/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /home/user/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/railties-5.2.0/lib/rails/templates/rails/welcome/index.html.erb (4.8ms)
+Completed 200 OK in 37ms (Views: 20.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-05-23 00:43:21 +0300
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /home/user/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/railties-5.2.0/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /home/user/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/railties-5.2.0/lib/rails/templates/rails/welcome/index.html.erb (3.8ms)
+Completed 200 OK in 17ms (Views: 6.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-05-23 00:43:24 +0300
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /home/user/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/railties-5.2.0/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /home/user/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/railties-5.2.0/lib/rails/templates/rails/welcome/index.html.erb (8.0ms)
+Completed 200 OK in 22ms (Views: 14.6ms | ActiveRecord: 0.0ms)
+
+
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ bin/rails:9
+  [1m[35m (267.1ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  ↳ bin/rails:9
+  [1m[35m (104.0ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::InternalMetadata Load (0.4ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::InternalMetadata Create (1.1ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "environment"], ["value", "development"], ["created_at", "2018-05-22 21:43:41.751373"], ["updated_at", "2018-05-22 21:43:41.751373"]]
+  ↳ bin/rails:9
+  [1m[35m (86.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+Started GET "/" for 127.0.0.1 at 2018-05-23 00:43:50 +0300
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /home/user/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/railties-5.2.0/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /home/user/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/railties-5.2.0/lib/rails/templates/rails/welcome/index.html.erb (3.6ms)
+Completed 200 OK in 16ms (Views: 6.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-05-23 00:43:53 +0300
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /home/user/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/railties-5.2.0/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /home/user/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/railties-5.2.0/lib/rails/templates/rails/welcome/index.html.erb (7.5ms)
+Completed 200 OK in 16ms (Views: 12.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-05-23 00:43:55 +0300
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /home/user/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/railties-5.2.0/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /home/user/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/railties-5.2.0/lib/rails/templates/rails/welcome/index.html.erb (4.6ms)
+Completed 200 OK in 21ms (Views: 6.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/features" for 127.0.0.1 at 2018-05-23 01:05:31 +0300
+Processing by PagesController#features as HTML
+  Rendering pages/features.html.erb within layouts/application
+  Rendered shared/_external_navbar.html.erb (330.3ms)
+  Rendered pages/features.html.erb within layouts/application (333.9ms)
+Completed 500 Internal Server Error in 366ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `root_path' for #<#<Class:0x0055e138063b90>:0x0055e13803e908>
+Did you mean?  font_path):
+    1: <nav class="navbar navbar-default", style="margin-bottom: 0">
+    2:   <div class="container-fluid">
+    3:     <div class="navbar-header">
+    4:       <%=link_to("Beauty Academy", root_path, class: "navbar-brand topnav") %>
+    5:     </div>
+    6:     <div class="navbar-collapse">
+    7:       <ul class="nav navbar-nav navbar-right">
+  
+app/views/shared/_external_navbar.html.erb:4:in `_app_views_shared__external_navbar_html_erb___3487344762898064926_47212897292420'
+app/views/pages/features.html.erb:4:in `_app_views_pages_features_html_erb___3106414035251114763_47212898002060'
+Started GET "/landing" for 127.0.0.1 at 2018-05-23 01:06:35 +0300
+Processing by PagesController#landing as HTML
+  Rendering pages/landing.html.erb within layouts/application
+  Rendered shared/_external_navbar.html.erb (349.4ms)
+  Rendered pages/landing.html.erb within layouts/application (468.5ms)
+Completed 500 Internal Server Error in 952ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `root_path' for #<#<Class:0x0055e138063b90>:0x0055e13a32c848>
+Did you mean?  font_path):
+    1: <nav class="navbar navbar-default", style="margin-bottom: 0">
+    2:   <div class="container-fluid">
+    3:     <div class="navbar-header">
+    4:       <%=link_to("Beauty Academy", root_path, class: "navbar-brand topnav") %>
+    5:     </div>
+    6:     <div class="navbar-collapse">
+    7:       <ul class="nav navbar-nav navbar-right">
+  
+app/views/shared/_external_navbar.html.erb:4:in `_app_views_shared__external_navbar_html_erb___3487344762898064926_47212916138900'
+app/views/pages/landing.html.erb:1:in `_app_views_pages_landing_html_erb__4527718112417683726_47212916206240'
+Started GET "/" for 127.0.0.1 at 2018-05-23 01:14:27 +0300
+Processing by PagesController#landing as HTML
+  Rendering pages/landing.html.erb within layouts/application
+  Rendered shared/_external_navbar.html.erb (278.1ms)
+  Rendered pages/landing.html.erb within layouts/application (281.0ms)
+Completed 500 Internal Server Error in 345ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `new_user_registration_path' for #<#<Class:0x0055dca5522060>:0x0055dca54bf410>):
+     9:             <%= link_to("About us", features_path) %>
+    10:         </li>
+    11:         <li>
+    12:             <%= link_to("Register now", new_user_registration_path)%>
+    13:         </li>
+    14:         <li>
+    15:             <%= link_to("Sign in", new_user_session_path)%>
+  
+app/views/shared/_external_navbar.html.erb:12:in `_app_views_shared__external_navbar_html_erb___4584138280709228749_47203076563540'
+app/views/pages/landing.html.erb:1:in `_app_views_pages_landing_html_erb___1161899032220813764_47203077284920'
+Started GET "/" for 127.0.0.1 at 2018-05-23 01:18:06 +0300
+Processing by PagesController#landing as HTML
+  Rendering pages/landing.html.erb within layouts/application
+  Rendered shared/_external_navbar.html.erb (0.9ms)
+  Rendered pages/landing.html.erb within layouts/application (2.6ms)
+Completed 200 OK in 406ms (Views: 403.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-05-23 01:20:13 +0300
+Processing by PagesController#landing as HTML
+  Rendering pages/landing.html.erb within layouts/application
+  Rendered shared/_external_navbar.html.erb (0.8ms)
+  Rendered pages/landing.html.erb within layouts/application (2.3ms)
+Completed 500 Internal Server Error in 22ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (couldn't find file 'rails_bootstrap_forms' with type 'text/css'
+Checked in these paths: 
+  /home/user/Desktop/web_tech/lab2/rgdemo/app/assets/config
+  /home/user/Desktop/web_tech/lab2/rgdemo/app/assets/images
+  /home/user/Desktop/web_tech/lab2/rgdemo/app/assets/javascripts
+  /home/user/Desktop/web_tech/lab2/rgdemo/app/assets/stylesheets
+  /home/user/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/coffee-rails-4.2.2/lib/assets/javascripts
+  /home/user/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actioncable-5.2.0/lib/assets/compiled
+  /home/user/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/activestorage-5.2.0/app/assets/javascripts
+  /home/user/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionview-5.2.0/lib/assets/compiled
+  /home/user/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/turbolinks-source-5.1.0/lib/assets/javascripts
+  /home/user/Desktop/web_tech/lab2/rgdemo/node_modules):
+     5:     <%= csrf_meta_tags %>
+     6:     <%= csp_meta_tag %>
+     7: 
+     8:     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+     9:     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    10:   </head>
+    11: 
+  
+app/assets/stylesheets/application.scss:15
+app/views/layouts/application.html.erb:8:in `_app_views_layouts_application_html_erb__3543767757171839206_70246379354860'
+Started GET "/" for 127.0.0.1 at 2018-05-23 01:22:32 +0300
+Processing by PagesController#landing as HTML
+  Rendering pages/landing.html.erb within layouts/application
+  Rendered shared/_external_navbar.html.erb (0.8ms)
+  Rendered pages/landing.html.erb within layouts/application (3.0ms)
+Completed 500 Internal Server Error in 17ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (couldn't find file 'rails_bootstrap_forms' with type 'text/css'
+Checked in these paths: 
+  /home/user/Desktop/web_tech/lab2/rgdemo/app/assets/config
+  /home/user/Desktop/web_tech/lab2/rgdemo/app/assets/images
+  /home/user/Desktop/web_tech/lab2/rgdemo/app/assets/javascripts
+  /home/user/Desktop/web_tech/lab2/rgdemo/app/assets/stylesheets
+  /home/user/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/coffee-rails-4.2.2/lib/assets/javascripts
+  /home/user/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actioncable-5.2.0/lib/assets/compiled
+  /home/user/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/activestorage-5.2.0/app/assets/javascripts
+  /home/user/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionview-5.2.0/lib/assets/compiled
+  /home/user/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/turbolinks-source-5.1.0/lib/assets/javascripts
+  /home/user/Desktop/web_tech/lab2/rgdemo/node_modules):
+     5:     <%= csrf_meta_tags %>
+     6:     <%= csp_meta_tag %>
+     7: 
+     8:     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+     9:     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    10:   </head>
+    11: 
+  
+app/assets/stylesheets/application.scss:15
+app/views/layouts/application.html.erb:8:in `_app_views_layouts_application_html_erb__3543767757171839206_70246606291920'
+Started GET "/" for 127.0.0.1 at 2018-05-23 01:23:32 +0300
+Processing by PagesController#landing as HTML
+  Rendering pages/landing.html.erb within layouts/application
+  Rendered shared/_external_navbar.html.erb (0.7ms)
+  Rendered pages/landing.html.erb within layouts/application (2.5ms)
+Completed 500 Internal Server Error in 266ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (couldn't find file 'rails_bootstrap_forms' with type 'text/css'
+Checked in these paths: 
+  /home/user/Desktop/web_tech/lab2/rgdemo/app/assets/config
+  /home/user/Desktop/web_tech/lab2/rgdemo/app/assets/images
+  /home/user/Desktop/web_tech/lab2/rgdemo/app/assets/javascripts
+  /home/user/Desktop/web_tech/lab2/rgdemo/app/assets/stylesheets
+  /home/user/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/coffee-rails-4.2.2/lib/assets/javascripts
+  /home/user/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actioncable-5.2.0/lib/assets/compiled
+  /home/user/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/activestorage-5.2.0/app/assets/javascripts
+  /home/user/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionview-5.2.0/lib/assets/compiled
+  /home/user/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/turbolinks-source-5.1.0/lib/assets/javascripts
+  /home/user/Desktop/web_tech/lab2/rgdemo/node_modules):
+     5:     <%= csrf_meta_tags %>
+     6:     <%= csp_meta_tag %>
+     7: 
+     8:     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+     9:     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    10:   </head>
+    11: 
+  
+app/assets/stylesheets/application.scss:15
+app/views/layouts/application.html.erb:8:in `_app_views_layouts_application_html_erb___3447458648653991314_47024664961700'
+Started GET "/" for 127.0.0.1 at 2018-05-23 01:23:50 +0300
+Processing by PagesController#landing as HTML
+  Rendering pages/landing.html.erb within layouts/application
+  Rendered shared/_external_navbar.html.erb (0.9ms)
+  Rendered pages/landing.html.erb within layouts/application (2.8ms)
+Completed 500 Internal Server Error in 24ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (couldn't find file 'rails_bootstrap_forms' with type 'text/css'
+Checked in these paths: 
+  /home/user/Desktop/web_tech/lab2/rgdemo/app/assets/config
+  /home/user/Desktop/web_tech/lab2/rgdemo/app/assets/images
+  /home/user/Desktop/web_tech/lab2/rgdemo/app/assets/javascripts
+  /home/user/Desktop/web_tech/lab2/rgdemo/app/assets/stylesheets
+  /home/user/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/coffee-rails-4.2.2/lib/assets/javascripts
+  /home/user/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actioncable-5.2.0/lib/assets/compiled
+  /home/user/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/activestorage-5.2.0/app/assets/javascripts
+  /home/user/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionview-5.2.0/lib/assets/compiled
+  /home/user/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/turbolinks-source-5.1.0/lib/assets/javascripts
+  /home/user/Desktop/web_tech/lab2/rgdemo/node_modules):
+     5:     <%= csrf_meta_tags %>
+     6:     <%= csp_meta_tag %>
+     7: 
+     8:     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+     9:     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    10:   </head>
+    11: 
+  
+app/assets/stylesheets/application.scss:15
+app/views/layouts/application.html.erb:8:in `_app_views_layouts_application_html_erb___3447458648653991314_70277496208000'
+Started GET "/" for 127.0.0.1 at 2018-05-23 07:19:02 +0300
+Processing by PagesController#landing as HTML
+  Rendering pages/landing.html.erb within layouts/application
+  Rendered shared/_external_navbar.html.erb (0.8ms)
+  Rendered pages/landing.html.erb within layouts/application (2.5ms)
+Completed 200 OK in 4949ms (Views: 4939.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/features" for 127.0.0.1 at 2018-05-23 07:19:23 +0300
+Processing by PagesController#features as HTML
+  Rendering pages/features.html.erb within layouts/application
+  Rendered shared/_external_navbar.html.erb (0.9ms)
+  Rendered pages/features.html.erb within layouts/application (2.7ms)
+Completed 200 OK in 117ms (Views: 38.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-05-23 07:32:24 +0300
+Processing by PagesController#landing as HTML
+  Rendering pages/landing.html.erb within layouts/application
+  Rendered shared/_external_navbar.html.erb (0.8ms)
+  Rendered pages/landing.html.erb within layouts/application (2.5ms)
+Completed 200 OK in 45ms (Views: 43.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/features" for 127.0.0.1 at 2018-05-23 07:35:21 +0300
+Processing by PagesController#features as HTML
+  Rendering pages/features.html.erb within layouts/application
+  Rendered shared/_external_navbar.html.erb (1.0ms)
+  Rendered pages/features.html.erb within layouts/application (7.4ms)
+Completed 200 OK in 1606ms (Views: 1604.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/features" for 127.0.0.1 at 2018-05-23 07:36:56 +0300
+Processing by PagesController#features as HTML
+  Rendering pages/features.html.erb within layouts/application
+  Rendered shared/_external_navbar.html.erb (1.9ms)
+  Rendered pages/features.html.erb within layouts/application (5.6ms)
+Completed 200 OK in 51ms (Views: 48.6ms | ActiveRecord: 0.0ms)
+
+
