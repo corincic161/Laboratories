@@ -23,4 +23,3 @@ It also created a special file, called a migration.
 ## Restricting access
 * Adding controller filters
 * Restrict delete action to owners
-* 
