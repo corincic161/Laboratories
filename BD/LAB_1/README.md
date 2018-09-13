@@ -13,13 +13,39 @@ Hard disc: 6GB
 Drive disc: DVD ROM Drive
 
 ### 3
-*Database
+* Database
+* Tables
+* Database Diagrams
+* Indexes
+* Views
+* Schemes
+* Syonyms
+* Stored Procedures
+* Triggers
+* Functions
+* Data type
+* Rules
+* Sequences
 
-### And coding style tests
+### 4
+ Windows authentication - when we conect to SQL server using Windows authentication, there is no need for a specific login and password;
+ Mixt authentication - is the independent authentication managed by SQL Server
 
-Explain what these tests test and why
+### 5
+SQL Server provides server-level roles to help you manage the permissions on a server. These roles are security principals that group other principals. Server-level roles are server-wide in their permissions scope. Fixed server roles are provided for convenience and backward compatibility. Assign more specific permissions whenever possible. SQL Server provides nine fixed server roles:
+* sysadmin
+* securityadmin
+* serveradmin
+* setupadmin
+* processadmin
+* diskadmin
+* dbcreator
+* bulkadmin
+* public
 
-```
-Give an example
-```
+### 6 
+A schema is a collection of database objects associated with one particular database username. This username is called the schema owner, or the owner of the related group of objects. You may have one or multiple schemas in a database. The user is only associated with the schema of the same name and often the terms will be used interchangeably. 
+The good thing about schemas is that when you access a table that you own (in your own schema), you do not have to refer to the schema name.The first option is preferred because it requires fewer keystrokes. 
 
+## Practical tasks
+The screenshorts are in this reporsitory
