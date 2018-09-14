@@ -4,46 +4,34 @@
 ## Answers to questions
 
 ### 1. File types used in Microsoft SQL Server 2017
-Using this technology reduces network data flow, increases system efficiency, decreasing the number of mistakes. Another very important mechanism of the system with client-serves architecture is the security.
 
+* .mdf - Primary database data file.
+* .ndf - Other database data files i.e. non Primary.
+* .ldf - Log data file.
 ### 2. The structure of pages for storage data 
-Procesor x64: 1.4GHz (2.0GHz - recomended)
-RAM: 1GB (4GB< - recomended); Express edition - 512Mb(1GB - recomended)
-Resolution: VGA 800X600 or more
-Hard disc: 6GB
-Drive disc: DVD ROM Drive
+The Page is the smallest unit of data storage in Microsoft SQL Server.  A page contains the data in the rows.  A row can only reside in one page. Each Page can contain 8KB of information, due to this, the maximum size of a Row is 8KB. A group of 8 adjacent pages is called an extent. A heap is a collection of data pages.
+### 3. System databases
+SQL Server includes the following system databases.
 
-### 3. System databases, importantce
-* Database
-* Tables
-* Database Diagrams
-* Indexes
-* Views
-* Schemes
-* Syonyms
-* Stored Procedures
-* Triggers
-* Functions
-* Data type
-* Rules
-* Sequences
-
-### 4. The principles of creating the database in SQL Server management Studio
- Windows authentication - when we conect to SQL server using Windows authentication, there is no need for a specific login and password;
- Mixt authentication - is the independent authentication managed by SQL Server
-
+* master Database	Records all the system-level information for an instance of SQL Server.
+* msdb - Database	Is used by SQL Server Agent for scheduling alerts and jobs.
+* model - Database	Is used as the template for all databases created on the instance of SQL Server. Modifications made to the model database, such as database size, collation, recovery model, and other database options, are applied to any databases created afterward.
+* Resource - Database	Is a read-only database that contains system objects that are included with SQL Server. System objects are physically persisted in the Resource database, but they logically appear in the sys schema of every database.
+* tempdb - Database	Is a workspace for holding temporary objects or intermediate result sets.
 ### 5. What is a database maintenance plan? What are the techniques for creating maintenance plans?
-SQL Server provides server-level roles to help you manage the permissions on a server. These roles are security principals that group other principals. Server-level roles are server-wide in their permissions scope. Fixed server roles are provided for convenience and backward compatibility. Assign more specific permissions whenever possible. SQL Server provides nine fixed server roles:
-* sysadmin
-* securityadmin
-* serveradmin
-* setupadmin
-* processadmin
-* diskadmin
-* dbcreator
-* bulkadmin
-* public
+Maintenance plans create a workflow of the tasks required to make sure that your database is optimized, regularly backed up, and free of inconsistencies. The Maintenance Plan Wizard also creates core maintenance plans, but creating plans manually gives you much more flexibility.
+To create or manage Maintenance Plans, you must be a member of the sysadmin fixed server role.
 
+#### To create a maintenance plan using the Maintenance Plan Wizard
+* In Object Explorer, click the plus sign to expand the server where you want to create a maintenance plan.
+* Click the plus sign to expand the Management folder.
+* Right-click the Maintenance Plans folder and select Maintenance Plan Wizard.
+* Follow the steps of the wizard to create a maintenance plan. For more information, see Use the Maintenance Plan Wizard.
 
+#### To create a maintenance plan using the design surface
+* In Object Explorer, click the plus sign to expand the server where you want to create a maintenance plan.
+* Click the plus sign to expand the Management folder.
+* Right-click the Maintenance Plans folder and select New Maintenance Plan.
+* Create a maintenance plan following the steps in Create a Maintenance Plan (Maintenance Plan Design Surface).
 ## Practical tasks
 The screenshorts are in this reporsitory
