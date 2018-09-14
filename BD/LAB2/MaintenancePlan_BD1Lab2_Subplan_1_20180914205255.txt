@@ -1,0 +1,30 @@
+Microsoft(R) Server Maintenance Utility (Unicode) Version 14.0.2002
+Report was generated on "DESKTOP-93NDOP3".
+Maintenance Plan: MaintenancePlan_BD1Lab2
+Duration: 00:00:01
+Status: Warning: One or more tasks failed.
+Details:
+Check Database Integrity (DESKTOP-93NDOP3)
+Check Database integrity on Local server connection
+Databases: DB1Lab2
+Include indexes
+Physical only
+Task start: 2018-09-14T20:52:54.
+Task end: 2018-09-14T20:52:55.
+Success
+Command:USE [DB1Lab2]
+GO
+DBCC CHECKDB(N''DB1Lab2'')  WITH  PHYSICAL_ONLY
+
+GO
+
+
+Shrink Database (DESKTOP-93NDOP3)
+Shrink Database on Local server connection
+Databases: DB1Lab2
+Limit: 250 MB
+Free space: 10 %
+Task start: 2018-09-14T20:52:55.
+Task end: 2018-09-14T20:52:55.
+Failed:(0) Property Size is not available for Database '[DB1Lab2]'. This property may not exist for this object, or may not be retrievable due to insufficient access rights.
+
