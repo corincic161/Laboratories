@@ -70,8 +70,14 @@ SQL constraints are used to specify rules for the data in a table.
 * INDEX - Used to create and retrieve data from the database very quickly
 
 ### 4. What difficulties can occur in the process of deleting fields in already existing tables?
+You cannot delete a column that has a CHECK constraint. You must first delete the constraint.
+
+You cannot delete a column that has PRIMARY KEY or FOREIGN KEY constraints or other dependencies except when using the Table Designer. When using Object Explorer or Transact-SQL, you must first remove all dependencies on the column.
 
 ### 5. What difficulties and consequences can occur in the process of modifying existing table fields? Which fields can not be changed?
-
+Modifying the data type of a column that already contains data can result in the permanent loss of data when the existing data is converted to the new type. In addition, code and applications that depend on the modified column may fail. These include queries, views, stored procedures, user-defined functions, and client applications. Note that these failures will cascade. For example, a stored procedure that calls a user-defined function that depends on the modified column may fail. Carefully consider any changes you want to make to a column before making it.
 ## Practical tasks
+### 1. DECIMAL(4.1) - d) 1116.2
+### 2. Col1 * Col2 => DECIMAL(2.1)
 The screenshorts are in this reporsitory
+### 3.-4. The screenshorts are in this reporsitory
