@@ -60,6 +60,14 @@ Displays the name of the selected column.
 * table	- Stores a result-set for later processing
 
 ### 3. What integrity constraints use SQL Server to maintain the consistency of the database?
+SQL constraints are used to specify rules for the data in a table.
+* NOT NULL - Ensures that a column cannot have a NULL value
+* UNIQUE - Ensures that all values in a column are different
+* PRIMARY KEY - A combination of a NOT NULL and UNIQUE. Uniquely identifies each row in a table
+* FOREIGN KEY - Uniquely identifies a row/record in another table
+* CHECK - Ensures that all values in a column satisfies a specific condition
+* DEFAULT - Sets a default value for a column when no value is specified
+* INDEX - Used to create and retrieve data from the database very quickly
 
 ### 4. What difficulties can occur in the process of deleting fields in already existing tables?
 
