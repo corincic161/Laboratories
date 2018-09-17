@@ -41,17 +41,17 @@ Displays the name of the selected column.
 * datetime - Defines a date that is combined with a time of day with fractional seconds that is based on a 24-hour clock.	
 * time - Defines a time of a day. The time is without time zone awareness and is based on a 24-hour clock.
 #### Character strings
-* char	
-* varchar
-* text	
+* char - Fixed-length, non-Unicode character data with a length of n bytes. n must be a value from 1 through 8,000.
+* varchar - Variable-length, non-Unicode character data. n can be a value from 1 through 8,000. max indicates that the maximum storage size is 2^31-1 bytes.
+* text - Variable-length non-Unicode data in the code page of the server and with a maximum length of 2^31-1 (2,147,483,647) characters. When the server code page uses double-byte characters, the storage is still 2,147,483,647 bytes. Depending on the character string, the storage size may be less than 2,147,483,647 bytes.
 #### Unicode character strings
-* nchar	
-* nvarchar
-* ntext	
+* nchar	- Fixed-length Unicode character data of n characters. n must be a value from 1 through 4,000. The storage size is two times n bytes.
+* nvarchar - Variable-length Unicode character data. n can be a value from 1 through 4,000 characters. max indicates that the maximum storage size is 2^31-1 bytes. The storage size, in bytes, is two times the number of characters entered + 2 bytes.
+* ntext	- Variable-length Unicode data with a maximum length of 2^30 – 1 (1,073,741,823) characters. Storage size, in bytes, is two times the number of characters entered.
 #### Binary strings
-* binary	
-* varbinary
-* image	
+* binary - Fixed-length binary data with a length of n bytes, where n is a value from 1 through 8,000. The storage size is n bytes.
+* varbinary - Variable-length binary data. n can be a value from 1 through 8,000 bytes. max indicates that the maximum storage size is 2^31-1 bytes. The storage size is the actual length of the data entered + 2 bytes.
+* image	- Variable-length binary data from 0 through 2^31-1 (2,147,483,647) bytes.
 #### Other data types
 * cursor	
 * rowversion
@@ -59,8 +59,6 @@ Displays the name of the selected column.
 * uniqueidentifier
 * sql_variant	
 * xml
-* Spatial Geometry Types	
-* Spatial Geography Types
 * table	
 
 ### 3. What integrity constraints use SQL Server to maintain the consistency of the database?
