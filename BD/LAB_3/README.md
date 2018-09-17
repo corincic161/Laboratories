@@ -79,5 +79,4 @@ Modifying the data type of a column that already contains data can result in the
 ## Practical tasks
 ### 1. DECIMAL(4.1) - d) 1116.2
 ### 2. Col1 * Col2 => DECIMAL(2.1)
-The screenshorts are in this reporsitory
 ### 3.-4. The screenshorts are in this reporsitory
