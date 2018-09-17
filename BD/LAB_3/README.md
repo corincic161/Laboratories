@@ -53,13 +53,11 @@ Displays the name of the selected column.
 * varbinary - Variable-length binary data. n can be a value from 1 through 8,000 bytes. max indicates that the maximum storage size is 2^31-1 bytes. The storage size is the actual length of the data entered + 2 bytes.
 * image	- Variable-length binary data from 0 through 2^31-1 (2,147,483,647) bytes.
 #### Other data types
-* cursor	
-* rowversion
-* hierarchyid	
-* uniqueidentifier
-* sql_variant	
-* xml
-* table	
+* cursor - Stores a reference to a cursor used for database operations	
+* uniqueidentifier - Stores a globally unique identifier (GUID)
+* sql_variant - Stores up to 8,000 bytes of data of various data types, except text, ntext, and timestamp	
+* xml - Stores XML formatted data. Maximum 2GB
+* table	- Stores a result-set for later processing
 
 ### 3. What integrity constraints use SQL Server to maintain the consistency of the database?
 
