@@ -90,4 +90,16 @@ FROM studenti, studenti_reusita
 WHERE Nota > 8 and Data_Evaluare like '%2018%';
 
 ```
-![Results for task 1](images/lab4_9.JPG)
+![Results for task 9](images/lab4_9.JPG)
+
+## Task 25
+In ce grupe de studii (Cod_ Grupa) figureaza mai mult de 24 de studenti?
+```sql
+select grupe.Cod_Grupa, COUNT(DISTINCT studenti.Id_Student) from grupe
+	inner join studenti_reusita on grupe.Id_Grupa=studenti_reusita.Id_Grupa
+	inner join studenti on studenti_reusita.Id_Student=studenti.Id_Student
+	group by grupe.Id_Grupa, grupe.Cod_Grupa
+	having COUNT(DISTINCT studenti.Id_Student) > 24;
+
+```
+![Results for task 25](images/lab4_25.JPG)
