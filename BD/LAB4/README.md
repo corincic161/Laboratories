@@ -103,3 +103,17 @@ select grupe.Cod_Grupa, COUNT(DISTINCT studenti.Id_Student) from grupe
 
 ```
 ![Results for task 25](images/lab4_25.JPG)
+
+## Task 23
+Sa se obtina lista disciplinelor (Disciplina) sustinute de studenti cu nota medie de promovare la
+examen mai mare de 7, in ordine descrescatoare dupa denumirea disciplinei.
+```sql
+select discipline.Disciplina, AVG(studenti_reusita.Nota) as Media from discipline
+	inner join studenti_reusita on discipline.Id_Disciplina=studenti_reusita.Id_Disciplina
+	where Tip_Evaluare like '%Examen%'
+	group by discipline.Disciplina
+	having AVG(studenti_reusita.Nota)>7
+	order by discipline.Disciplina DESC;
+
+```
+![Results for task 9](images/lab4_23.JPG)
