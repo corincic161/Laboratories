@@ -90,4 +90,4 @@ FROM studenti, studenti_reusita
 WHERE Nota > 8 and Data_Evaluare like '%2018%';
 
 ```
-![Results for task 1](images/lab4_9.PNG)
+![Results for task 1](images/lab4_9.JPG)
