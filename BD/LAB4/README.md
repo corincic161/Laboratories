@@ -80,3 +80,14 @@
     MS SQL Server provides the top syntax that can be used in SQL select queries to limit the records returned from a query. This is especially useful when querying very large tables in cases where the user only cares about a subset of the records. Listed below are examples of how to use the top syntax.
 	- `SELECT TOP 100 * FROM employee`
 	- `SELECT 20 PERCENT * FROM employee`
+
+## Task 9
+Gasiti numele, adresa studentilor si codul disciplinei la care studentii au avut eel putin o nota mai
+mare decat 8 in 2018.
+```sql
+SELECT Nume_Student , Adresa_Postala_Student, Id_Disciplina
+FROM studenti, studenti_reusita
+WHERE Nota > 8 and Data_Evaluare like '%2018%';
+
+```
+![Results for task 1](images/lab4_9.PNG)
