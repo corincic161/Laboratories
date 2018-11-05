@@ -88,7 +88,7 @@ SELECT Nume_Student , Adresa_Postala_Student, Id_Disciplina
 FROM studenti, studenti_reusita
 WHERE Nota > 8 and Data_Evaluare like '%2018%';
 ```
-![Results for task 9](images/lab4_9.JPG)
+![Results for task 1](images/lab5_1.JPG)
 
 **2**
 In ce grupe de studii (Cod_ Grupa) figureaza mai mult de 24 de studenti?
@@ -99,9 +99,9 @@ select grupe.Cod_Grupa, COUNT(DISTINCT studenti.Id_Student) from grupe
 	group by grupe.Id_Grupa, grupe.Cod_Grupa
 	having COUNT(DISTINCT studenti.Id_Student) > 24;
 ```
-![Results for task 25](images/lab4_25.JPG)
+![Results for task 2](images/lab5_2.JPG)
 
-## Task 23
+## Task 3
 Sa se obtina lista disciplinelor (Disciplina) sustinute de studenti cu nota medie de promovare la
 examen mai mare de 7, in ordine descrescatoare dupa denumirea disciplinei.
 ```sql
@@ -112,4 +112,17 @@ select discipline.Disciplina, AVG(studenti_reusita.Nota) as Media from disciplin
 	having AVG(studenti_reusita.Nota)>7
 	order by discipline.Disciplina DESC;
 ```
-![Results for task 9](images/lab4_23.JPG)
+![Results for task 3](images/lab5_3.JPG)
+
+## Task 4
+Sa se obtina lista disciplinelor (Disciplina) sustinute de studenti cu nota medie de promovare la
+examen mai mare de 7, in ordine descrescatoare dupa denumirea disciplinei.
+```sql
+select discipline.Disciplina, AVG(studenti_reusita.Nota) as Media from discipline
+	inner join studenti_reusita on discipline.Id_Disciplina=studenti_reusita.Id_Disciplina
+	where Tip_Evaluare like '%Examen%'
+	group by discipline.Disciplina
+	having AVG(studenti_reusita.Nota)>7
+	order by discipline.Disciplina DESC;
+```
+![Results for task 4](images/lab5_4.JPG)
