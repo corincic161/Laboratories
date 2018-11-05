@@ -1,4 +1,4 @@
-# Laboratory work nr. 5
+# Laboratory work nr. 5 by Sclifos Corina
 
 ## Answers to questions
 1. **Types of blocks in Transact SQL.**
@@ -8,38 +8,24 @@
 have explicit output parameters.
   * Functions: These are Transact SQL blocks, which have a name, have input parameters, and everything
 time returns a value
-2. **What do DDL, DML, DCL and TCL mean?**
-
-	DDL(Data Definition Language) : DDL or Data Definition Language actually consists of the SQL commands that can be used to define the database schema. It simply deals with descriptions of the database schema and is used to create and modify the structure of database objects in database.
-
-	## Examples of DDL commands:
-	* **CREATE** is used to create the database or its objects (like table, index, function, views, store procedure and triggers).
-	* **DROP**  is used to delete objects from the database.
-	* **ALTER** is used to alter the structure of the database.
-	* **TRUNCATE** is used to remove all records from a table, including all spaces allocated for the records are removed.
-	* **COMMENT** is used to add comments to the data dictionary.
-	* **RENAME** is used to rename an object existing in the database.
-	* **DML(Data Manipulation Language)** The SQL commands that deals with the manipulation of data present in database belong to DML or Data Manipulation Language and this includes most of the SQL statements.
-
-	## Examples of DML:
-	* **SELECT** is used to retrieve data from the a database.
-	* **INSERT** is used to insert data into a table.
-	* **UPDATE** is used to update existing data within a table.
-	* **DELETE** is used to delete records from a database table.
-	* **DCL(Data Control Language)** DCL includes commands such as GRANT and REVOKE which mainly deals with the rights, permissions and other controls of the database system.
-
-	## Examples of DCL commands:
-
-	* **GRANT** gives user’s access privileges to database.
-	* **REVOKE** withdraw user’s access privileges given by using the GRANT command.
-	* **TCL(transaction Control Language)** TCL commands deals with the transaction within the database.
-
-	## Examples of TCL commands:
-
-	* **COMMIT** commits a Transaction.
-	* **ROLLBACK** rollbacks a transaction in case of any error occurs.
-	* **SAVEPOINT** sets a savepoint within a transaction.
-	* **SET TRANSACTION** specify characteristics for the transaction.
+2. **Presentation of variables.**
+* Local variable - A Transact-SQL block can be built from other sections, such as the declarative one. The section
+the declaratory begins with the DECLARE instruction and is optional!; it may contain a number of statements,
+including variables.
+In the Transact-SQL language, local variables can be used to store some values that can be
+tested or modified, in addition, ensures the transfer of data to and from database tables. variables
+local areas have as their domain the lot, procedure or block in which they were declared. 
+* Glogal variable - SQL Server offers a large number of global variables that are very effective to be
+used in Transact-SQL. Global variables are a special type of variable. server always maintain the values of these variables. All global variables represent information server-specific or a current user session.
+Global variable names begin with @@ prefix. They do not have to be declared because
+the server keeps them constant. In other words, they are functions defined by the system and can not be
+declared.
+@@ERROR
+@@IDENTITY
+@@VERSION
+@@SERVERNAME
+@@LANGUAGE
+@@MAX CONNECTIONS
 
 3. **Transact SQL operations:**
 
