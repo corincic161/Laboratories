@@ -20,12 +20,12 @@ used in Transact-SQL. Global variables are a special type of variable. server al
 Global variable names begin with @@ prefix. They do not have to be declared because
 the server keeps them constant. In other words, they are functions defined by the system and can not be
 declared.
-@@ERROR
-@@IDENTITY
-@@VERSION
-@@SERVERNAME
-@@LANGUAGE
-@@MAX CONNECTIONS
+- @@ERROR
+- @@IDENTITY
+- @@VERSION
+- @@SERVERNAME
+- @@LANGUAGE
+- @@MAX CONNECTIONS
 
 3. **Transact SQL operations:**
 
