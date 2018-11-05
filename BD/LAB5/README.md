@@ -20,57 +20,67 @@ used in Transact-SQL. Global variables are a special type of variable. server al
 Global variable names begin with @@ prefix. They do not have to be declared because
 the server keeps them constant. In other words, they are functions defined by the system and can not be
 declared.
-- @@ERROR
-- @@IDENTITY
-- @@VERSION
-- @@SERVERNAME
-- @@LANGUAGE
-- @@MAX CONNECTIONS
+	- @@ERROR
+	- @@IDENTITY
+	- @@VERSION
+	- @@SERVERNAME
+	- @@LANGUAGE
+	- @@MAX CONNECTIONS
 
-3. **Transact SQL operations:**
+3. **Explain the loop WHILE **
 
-    An operator is a symbol specifying an action that is performed on one or more expressions.
-    - Arithmetic Operators
-    - Logical Operators
-    - Assignment Operator
-    - Scope Resolution Operator
-    - Bitwise Operators
-    - Set Operators
-    - Comparison Operators
-    - String Concatenation Operator
-    - Compound Operators
-    - Unary Operators
+   Repetitive control structures perform certain code sequences of a number determined by times. into the
+the Transact-SQL system, there is a possibility - the application of the WHILE operator. WHILE operator tests
+a boolean condition and repeatedly executing an instruction or instruction block. Execution of these
+instructions will be repeated as long as the specified condition remains true.
+```sql
+WHILE <expresie_booleana>
+{ <instructiune_sql> I <bloc instructiuni sql> I BREAK I CONTINUE }
+```
 
-4. **Basic SQL Select instruction syntax:**
-    Retrieves rows from the database and enables the selection of one or many rows or columns from one or many tables in SQL Server. The full syntax of the SELECT statement is complex, but the main clauses can be summarized as:
+4. **Explain the structure CASE**
+   Parts of SQL statements can be executed conditionally. For example, a column of the query results
+can be formatted according to the values contained in another column.
+```sql
+CASE <expresie_intrare>
+	WHEN <expresie_comparare> THEN <expresie_rezultat>
+	[WHEN <expresie_comparare> THEN <expresie_rezultat> ... ]
+	[ELSE <expresie_rezultat_alternativ>]
+END
+```
 
+5. **Explain the instruction IF-ELSE**
+ The alternate control structure modifies the workflow by executing or not executing certain code sequences,
+depending on the fulfillment or non-fulfillment of certain conditions. Probably the most commonly used structure
+flow control is IF. .. ELSE.
+```sql
+IF <expresie_booleana>
+	{ <instructiune_sqll> I <bloc instructiuni sqll> }
+     [ ELSE
+	{ <instructiune_sql2> I <bloc instructiuni sql2> } ]
+```
 
-        [ WITH { [ XMLNAMESPACES ,] [ <common_table_expression> ] } ]  
-        SELECT select_list [ INTO new_table ]  
-        [ FROM table_source ] [ WHERE search_condition ]  
-        [ GROUP BY group_by_expression ]  
-        [ HAVING search_condition ]  
-        [ ORDER BY order_expression [ ASC | DESC ] ]  
+6. **EXCEPTIONS** 
+   Exceptions are problems (usually errors) that do not allow the program to continue. This thing
+it is due to the lack of sufficient information, and control is therefore passed to another program.
+Treating exceptions is a relatively simple means of determining errors, presents the mechanism of
+direct error indication and viewing and checking the exception m compilation process.
+  There are two ways to manage errors. The first is to set up a structure of the TRY exception
+the instruction block to be tested, and m CATCH (structured error handling), the error
+which must be lifted. The second way is to test the value of the system variable @@ ERROR (treating
+unstructured error).
+```sql
+BEGIN TRY
+	{instructiune_sqllbloc_sql}
+END TRY
 
-5. **What are the Transact SQL funtions:**
-    - **Aggregate functions:** Aggregate functions perform a calculation on a set of values and return a single value. They are allowed in the select list or the HAVING clause of a SELECT statement. You can use an aggregation in combination with the GROUP BY clause to calculate the aggregation on categories of rows.
-    - **Analytic functions:** Analytic functions compute an aggregate value based on a group of rows. However, unlike aggregate functions, analytic functions can return multiple rows for each group.
-    - **Ranking functions:** Ranking functions return a ranking value for each row in a partition. Depending on the function that is used, some rows might receive the same value as other rows.
-    - **Rowset functions:** Rowset functions Return an object that can be used like table references in an SQL statement.
-    - **Scalar functions:** Operate on a single value and then return a single value. Scalar functions can be used wherever an expression is valid.
+BEGIN CATCH
+	[{instructiune_sqllbloc_sql}]
+END CATCH ( ; ]
+````
 
-6. **JOIN in MSSQL:** 
-
-   An SQL *JOIN* clause - combines columns from one or more tables in a relational database. It creates a set that can be saved as a table or used as it is. A JOIN is a means for combining columns from one (self-join) or more tables by using values common to each.
-   SQL specifies five types of JOIN: **INNER**, **LEFT OUTER**, **RIGHT OUTER**, **FULL OUTER** and **CROSS**. As a special case, a table (base table, view, or joined table) can JOIN to itself in a self-join. 
-
-7. **How to limit results from SQL queries:**
-
-    MS SQL Server provides the top syntax that can be used in SQL select queries to limit the records returned from a query. This is especially useful when querying very large tables in cases where the user only cares about a subset of the records. Listed below are examples of how to use the top syntax.
-	- `SELECT TOP 100 * FROM employee`
-	- `SELECT 20 PERCENT * FROM employee`
-
-## Task 9
+## Practical Tasks
+**1**
 Gasiti numele, adresa studentilor si codul disciplinei la care studentii au avut eel putin o nota mai
 mare decat 8 in 2018.
 ```sql
@@ -80,7 +90,7 @@ WHERE Nota > 8 and Data_Evaluare like '%2018%';
 ```
 ![Results for task 9](images/lab4_9.JPG)
 
-## Task 25
+**2**
 In ce grupe de studii (Cod_ Grupa) figureaza mai mult de 24 de studenti?
 ```sql
 select grupe.Cod_Grupa, COUNT(DISTINCT studenti.Id_Student) from grupe
