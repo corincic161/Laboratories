@@ -110,11 +110,14 @@ PRINT 'Mai mare = ' + CAST(@MAI_MARE AS VARCHAR(2));
 **2**
 In ce grupe de studii (Cod_ Grupa) figureaza mai mult de 24 de studenti?
 ```sql
-select grupe.Cod_Grupa, COUNT(DISTINCT studenti.Id_Student) from grupe
-	inner join studenti_reusita on grupe.Id_Grupa=studenti_reusita.Id_Grupa
-	inner join studenti on studenti_reusita.Id_Student=studenti.Id_Student
-	group by grupe.Id_Grupa, grupe.Cod_Grupa
-	having COUNT(DISTINCT studenti.Id_Student) > 24;
+Declare @Nota1 int, @Nota2 int;
+Set @Nota1 = 6;
+Set @Nota2 = 8;
+
+SELECT TOP 10 Nume_Student, Prenume_Student FROM studenti
+inner join studenti_reusita on studenti_reusita.Id_Student=studenti.Id_Student
+inner join discipline on discipline.Id_Disciplina=studenti_reusita.Id_Disciplina
+WHERE Disciplina like '%Baze de date %' and Tip_Evaluare like '%Testul 1%' and Nota IN (iif ( Nota <> @Nota1 and Nota <> @Nota2, Nota, null ) )
 ```
 ![Results for task 2](images/lab5_2.JPG)
 
