@@ -84,9 +84,26 @@ END CATCH ( ; ]
 Gasiti numele, adresa studentilor si codul disciplinei la care studentii au avut eel putin o nota mai
 mare decat 8 in 2018.
 ```sql
-SELECT Nume_Student , Adresa_Postala_Student, Id_Disciplina
-FROM studenti, studenti_reusita
-WHERE Nota > 8 and Data_Evaluare like '%2018%';
+DECLARE @N1 INT, @N2 INT, @N3 INT;
+DECLARE @MAI_MARE INT;
+SET @N1 = 60 * RAND();
+SET @N2 = 60 * RAND();
+SET @N3 = 60 * RAND();
+
+if @N1 > @N2
+	select @MAI_MARE = @N1
+else
+	select @MAI_MARE = @N2
+
+if @MAI_MARE > @N3
+	select @MAI_MARE = @MAI_MARE
+else
+	select @MAI_MARE = @N3
+
+PRINT @N1;
+PRINT @N2;
+PRINT @N3;
+PRINT 'Mai mare = ' + CAST(@MAI_MARE AS VARCHAR(2));
 ```
 ![Results for task 1](images/lab5_1.JPG)
 
@@ -101,7 +118,7 @@ select grupe.Cod_Grupa, COUNT(DISTINCT studenti.Id_Student) from grupe
 ```
 ![Results for task 2](images/lab5_2.JPG)
 
-## Task 3
+**3**
 Sa se obtina lista disciplinelor (Disciplina) sustinute de studenti cu nota medie de promovare la
 examen mai mare de 7, in ordine descrescatoare dupa denumirea disciplinei.
 ```sql
@@ -114,7 +131,7 @@ select discipline.Disciplina, AVG(studenti_reusita.Nota) as Media from disciplin
 ```
 ![Results for task 3](images/lab5_3.JPG)
 
-## Task 4
+**4**
 Sa se obtina lista disciplinelor (Disciplina) sustinute de studenti cu nota medie de promovare la
 examen mai mare de 7, in ordine descrescatoare dupa denumirea disciplinei.
 ```sql
