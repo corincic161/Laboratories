@@ -81,8 +81,7 @@ END CATCH ( ; ]
 
 ## Practical Tasks
 **1**
-Gasiti numele, adresa studentilor si codul disciplinei la care studentii au avut eel putin o nota mai
-mare decat 8 in 2018.
+
 ```sql
 DECLARE @N1 INT, @N2 INT, @N3 INT;
 DECLARE @MAI_MARE INT;
@@ -108,7 +107,9 @@ PRINT 'Mai mare = ' + CAST(@MAI_MARE AS VARCHAR(2));
 ![Results for task 1](images/lab5_1.JPG)
 
 **2**
-In ce grupe de studii (Cod_ Grupa) figureaza mai mult de 24 de studenti?
+Afi~ati primele zece date (numele, prenumele studentului) in functie de valoarea notei (cu exceptia
+notelor 6 si 8 a studentului la primul test al disciplinei Baze de date , folosind structura de
+altemativa IF. .. ELSE. Sa se foloseasca variabilele.
 ```sql
 Declare @Nota1 int, @Nota2 int;
 Set @Nota1 = 6;
@@ -122,21 +123,28 @@ WHERE Disciplina like '%Baze de date %' and Tip_Evaluare like '%Testul 1%' and N
 ![Results for task 2](images/lab5_2.JPG)
 
 **3**
-Sa se obtina lista disciplinelor (Disciplina) sustinute de studenti cu nota medie de promovare la
-examen mai mare de 7, in ordine descrescatoare dupa denumirea disciplinei.
+Rezolvati aceesi sarcina, 1, apeland la structura selectiva CASE.
 ```sql
-select discipline.Disciplina, AVG(studenti_reusita.Nota) as Media from discipline
-	inner join studenti_reusita on discipline.Id_Disciplina=studenti_reusita.Id_Disciplina
-	where Tip_Evaluare like '%Examen%'
-	group by discipline.Disciplina
-	having AVG(studenti_reusita.Nota)>7
-	order by discipline.Disciplina DESC;
+DECLARE @N1 INT, @N2 INT, @N3 INT;
+DECLARE @MAI_MARE INT;
+SET @N1 = 60 * RAND();
+SET @N2 = 60 * RAND();
+SET @N3 = 60 * RAND();
+
+
+SET @MAI_MARE = CASE WHEN @n1 > @n2 THEN @n1 ELSE @n2 END
+SET @MAI_MARE = CASE WHEN @n3 > @MAI_MARE THEN @n3 ELSE @MAI_MARE END
+
+PRINT @n1
+PRINT @n2
+PRINT @n3
+PRINT 'Mai mare = ' + CAST(@MAI_MARE AS VARCHAR(2));
 ```
 ![Results for task 3](images/lab5_3.JPG)
 
 **4**
-Sa se obtina lista disciplinelor (Disciplina) sustinute de studenti cu nota medie de promovare la
-examen mai mare de 7, in ordine descrescatoare dupa denumirea disciplinei.
+Modificati exercitiile din sarcinile 1 si 2 pentru a include procesarea erorilor cu TRY si CATCH, si
+RAISERRROR.
 ```sql
 select discipline.Disciplina, AVG(studenti_reusita.Nota) as Media from discipline
 	inner join studenti_reusita on discipline.Id_Disciplina=studenti_reusita.Id_Disciplina
