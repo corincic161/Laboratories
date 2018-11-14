@@ -180,7 +180,22 @@ PRINT 'Mai mare = ' + CAST(@MAI_MARE AS VARCHAR(2));
 
 
 ```sql
+if (select COUNT(Id_Student) from studenti) < 10
+	begin
+		raiserror('Students are less then 10', 16, 1)
+	end
+else
+	Begin try
+		Declare @Nota1 int, @Nota2 int;
+		Set @Nota1 = 6;
+		Set @Nota2 = 8;
+
+		SELECT TOP 10 Nume_Student, Prenume_Student FROM studenti
+		inner join studenti_reusita on studenti_reusita.Id_Student=studenti.Id_Student
+		inner join discipline on discipline.Id_Disciplina=studenti_reusita.Id_Disciplina
+		WHERE Disciplina like '%Baze de date %' and Tip_Evaluare like '%Testul 1%' and 
+		      Nota IN (iif ( Nota <> @Nota1 and Nota <> @Nota2, Nota, null ) )
+	end try 
 
 
 ```
-![Results for task 4](images/lab5_4.1.JPG)
