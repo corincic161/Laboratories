@@ -146,11 +146,41 @@ PRINT 'Mai mare = ' + CAST(@MAI_MARE AS VARCHAR(2));
 Modificati exercitiile din sarcinile 1 si 2 pentru a include procesarea erorilor cu TRY si CATCH, si
 RAISERRROR.
 ```sql
-select discipline.Disciplina, AVG(studenti_reusita.Nota) as Media from discipline
-	inner join studenti_reusita on discipline.Id_Disciplina=studenti_reusita.Id_Disciplina
-	where Tip_Evaluare like '%Examen%'
-	group by discipline.Disciplina
-	having AVG(studenti_reusita.Nota)>7
-	order by discipline.Disciplina DESC;
+DECLARE @N1 INT, @N2 INT, @N3 INT;
+DECLARE @MAI_MARE INT;
+SET @N1 = 60 * RAND();
+SET @N2 = 60 * RAND();
+SET @N3 = 60 * RAND();
+
+BEGIN TRY
+	if @N1 > @N2
+		select @MAI_MARE = @N1
+	else
+		select @MAI_MARE = @N2
+
+	if @MAI_MARE > @N3
+		select @MAI_MARE = @MAI_MARE
+	else
+		select @MAI_MARE = @N3
+
+	RAISERROR ('Error1', 16, 1);
+
+END TRY
+BEGIN CATCH
+    PRINT 'ERROR: ' + ERROR_MESSAGE()
+END CATCH
+
+PRINT @N1;
+PRINT @N2;
+PRINT @N3;
+PRINT 'Mai mare = ' + CAST(@MAI_MARE AS VARCHAR(2));
+
 ```
-![Results for task 4](images/lab5_4.JPG)
+![Results for task 4](images/lab5_4.1.JPG)
+
+
+```sql
+
+
+```
+![Results for task 4](images/lab5_4.1.JPG)
