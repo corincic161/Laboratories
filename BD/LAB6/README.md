@@ -1,9 +1,7 @@
 # Laboratory work nr. 6 by Sclifos Corina
 
 ## Tasks
-**1**
-
-Write a T-Sql instruction, that will populate the column "Adresa _ Postala _ Profesor" from table "profesori" with value "mun.Chisinau", where the column value is NULL 
+**1** Write a T-Sql instruction, that will populate the column "Adresa _ Postala _ Profesor" from table "profesori" with value "mun.Chisinau", where the column value is NULL 
 
 ```sql
 use universitatea
@@ -14,20 +12,17 @@ update profesori Set Adresa_Postala_Profesor = 'mun.Chisinau' where Adresa_Posta
 ![Results for task 1](images/lab6_1.JPG)
 
 **2**
-Afi~ati primele zece date (numele, prenumele studentului) in functie de valoarea notei (cu exceptia
-notelor 6 si 8 a studentului la primul test al disciplinei Baze de date , folosind structura de
-altemativa IF. .. ELSE. Sa se foloseasca variabilele.
+Modify the table named "grupe" according to the following conditions:
+* "Cod_Grupa" field should accept unique values and should not accept unknown values
+* Take in consideration that the primary key is already defined on *Id_Group* column
 ```sql
-Declare @Nota1 int, @Nota2 int;
-Set @Nota1 = 6;
-Set @Nota2 = 8;
+use universitatea
+go
 
-SELECT TOP 10 Nume_Student, Prenume_Student FROM studenti
-inner join studenti_reusita on studenti_reusita.Id_Student=studenti.Id_Student
-inner join discipline on discipline.Id_Disciplina=studenti_reusita.Id_Disciplina
-WHERE Disciplina like '%Baze de date %' and Tip_Evaluare like '%Testul 1%' and Nota IN (iif ( Nota <> @Nota1 and Nota <> @Nota2, Nota, null ) )
+alter table grupe alter column Cod_Grupa char(6) not null;
+
+alter table grupe add unique(Cod_Grupa)
 ```
-![Results for task 2](images/lab5_2.JPG)
 
 **3**
 Rezolvati aceesi sarcina, 1, apeland la structura selectiva CASE.
