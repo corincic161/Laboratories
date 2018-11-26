@@ -171,4 +171,4 @@ go
 create nonclustered index create_index on grupe(Id_Grupa) on [userdatafgroup1]
 ```
 ![Results for task 8](images/lab6_8.1plan1.JPG)
-(images/lab6_8.1plan2.JPG)
+![Results for task 8](images/lab6_8.1plan2.JPG)
