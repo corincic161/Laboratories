@@ -60,7 +60,10 @@ go
 update studenti_reusita set nota = nota + 1  where Id_Student in (Select Sef_grupa from grupe) and nota < 10
 select * from studenti_reusita
 ```
-**5**
+**5** Create a table named "profesori_new", with columns: Id_Profesor, Nume_Profesor, Prenume_Profesor, Localitate, Adresa_1, Adresa_2
+* Id_Profesor - primary key, CLUSTERED
+* Localitate - have default value mun.Chisinau
+* Insert data from table "profesori" to the new table,
 ```sql
 create table profesori_new (
 	Id_Profesor int,
@@ -101,3 +104,13 @@ from profesori
 select * from profesori_new
 ```
 ![Results for task 5](images/lab6_5.JPG)
+
+**6**
+
+```sql
+
+```
+
+```sql
+
+```
