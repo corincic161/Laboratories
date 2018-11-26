@@ -147,4 +147,28 @@ values((Select Id_Disciplina from discipline where Disciplina = 'Structuri de da
 
 
 ```
-![Results for task 6](images/lab6_7.JPG)
+![Results for task 7](images/lab6_7.JPG)
+
+**8** Write the queries necessary for creating te indexes on tables from "University" database to ensure a higher performance to the queries from laboratory work number 4. Analyse the results.
+The indexes must be physically placed into userdatafgroup file group 
+```sql
+
+alter database universitatea
+add filegroup userdatafgroup1
+go
+
+alter database universitatea
+add file(
+	name = IndexLab6,
+	filename =  'E:\SQL_BD\DATA\IndexLab6\userdatafgroup1.ndf',
+	SIZE = 10MB,
+	MAXSIZE = 100MB,
+	filegrowgh = 10% )
+
+to filegroup userdatafgroup1
+go
+
+create nonclustered index create_index on grupe(Id_Grupa) on [userdatafgroup1]
+```
+![Results for task 8](images/lab6_8.1plan1.JPG)
+(images/lab6_8.1plan2.JPG)
