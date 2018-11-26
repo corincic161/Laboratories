@@ -60,4 +60,44 @@ go
 update studenti_reusita set nota = nota + 1  where Id_Student in (Select Sef_grupa from grupe) and nota < 10
 select * from studenti_reusita
 ```
+**5**
+```sql
+create table profesori_new (
+	Id_Profesor int,
+	Nume_Profesor varchar(60),
+	Prenume_Profesor varchar(60),
+	Localitate varchar(60) default('mun.Chisinau'),
+	Adresa_1 varchar(60),
+	Adresa_2 varchar(60),
+	Primary key clustered(Id_Profesor));
 
+```
+```sql
+Insert into profesori_new(Id_Profesor, Nume_Profesor, Prenume_Profesor, Localitate, Adresa_1, Adresa_2)
+select Id_Profesor, Nume_Profesor, Prenume_Profesor,
+case 
+	when charindex('str.', Adresa_Postala_Profesor) > 0 then
+		SUBSTRING(Adresa_Postala_Profesor, 1, CHARINDEX(', str.', Adresa_Postala_Profesor) - 1)
+	when charindex('bd.', Adresa_Postala_Profesor) > 0 then 
+		SUBSTRING(Adresa_Postala_Profesor, 1, CHARINDEX(', bd.', Adresa_Postala_Profesor) - 1)
+	when charindex('mun.', Adresa_Postala_Profesor) > 0 then 
+		SUBSTRING(Adresa_Postala_Profesor, 1, len(Adresa_Postala_Profesor))
+end,
+
+case 
+	when charindex('str.', Adresa_Postala_Profesor) > 0 then
+		SUBSTRING(Adresa_Postala_Profesor, CHARINDEX(' str.', Adresa_Postala_Profesor)+1, patindex('%, [0-9]%', Adresa_Postala_Profesor) - CHARINDEX(', str.', Adresa_Postala_Profesor))
+	when charindex('bd.', Adresa_Postala_Profesor) > 0 then 
+		SUBSTRING(Adresa_Postala_Profesor, CHARINDEX(' bd.', Adresa_Postala_Profesor)+1, patindex('%, [0-9]%', Adresa_Postala_Profesor) - CHARINDEX(', bd.', Adresa_Postala_Profesor))
+end,
+
+case 
+	when patindex('%, [0-9]%', Adresa_Postala_Profesor) > 0 then 
+		SUBSTRING(Adresa_Postala_Profesor, patindex('%, [0-9]%', Adresa_Postala_Profesor) + 1, len(Adresa_Postala_Profesor) - patindex('%, [0-9]%', Adresa_Postala_Profesor) + 1)
+
+end
+
+from profesori
+select * from profesori_new
+```
+![Results for task 5](images/lab6_5.JPG)
