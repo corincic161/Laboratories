@@ -127,3 +127,24 @@ values(107, 101, 1, '08:00', 202, 'B', 'Luni'),
 select * from orarul
 ```
 ![Results for task 6](images/lab6_6.JPG)
+
+**7** Write T-SQL instructions neccessary for populating the "orar" table for INF171 group, for Monday.
+```sql
+alter table orarul add constraint default_bloc default 'B' for Bloc
+
+insert into orarul (Id_Disciplina, Id_Profesor, Id_Grupa, Ora, Auditoriu, Bloc, Zi)
+values((Select Id_Disciplina from discipline where Disciplina = 'Structuri de date si algoritmi'),
+	   (Select Id_Profesor from profesori where Nume_Profesor = 'Bivol' and Prenume_Profesor = 'Ion'), 
+	   (Select Id_Grupa from grupe where Cod_Grupa = 'INF171'), '08:00', 502, 'B', 'Luni'),
+
+	  ((Select Id_Disciplina from discipline where Disciplina = 'Programe aplicative'),
+	   (Select Id_Profesor from profesori where Nume_Profesor = 'Mircea' and Prenume_Profesor = 'Sorin'), 
+	   (Select Id_Grupa from grupe where Cod_Grupa = 'INF171'), '11:30', 502, 'B', 'Luni'),
+
+      ((Select Id_Disciplina from discipline where Disciplina = 'Baze de date'),
+	   (Select Id_Profesor from profesori where Nume_Profesor = 'Micu' and Prenume_Profesor = 'Elena'), 
+	   (Select Id_Grupa from grupe where Cod_Grupa = 'INF171'), '13:00', 502, 'B', 'Luni')
+
+
+```
+![Results for task 6](images/lab6_7.JPG)
