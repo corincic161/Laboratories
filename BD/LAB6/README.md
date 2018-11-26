@@ -105,12 +105,25 @@ select * from profesori_new
 ```
 ![Results for task 5](images/lab6_5.JPG)
 
-**6**
+**6** Insert the next data in "orar" table, for the group CIB171, with Id_Group = 1, for Monday. All lessons will take place in studies block 'B' 
 
 ```sql
-
+create table orarul (
+Id_Disciplina int,
+Id_Profesor int,
+Id_Grupa int,
+Ora time,
+Auditoriu int,
+Bloc char(1),
+Zi char(10)
+primary key(Id_Disciplina, Id_Profesor, Id_Grupa));
 ```
-
 ```sql
+insert into orarul (Id_Disciplina, Id_Profesor, Id_Grupa, Ora, Auditoriu, Bloc, Zi)
+values(107, 101, 1, '08:00', 202, 'B', 'Luni'),
+	  (108, 101, 1, '11:30', 501, 'B', 'Luni'),
+      (119, 117, 1, '13:00', 501, 'B', 'Luni')
 
+select * from orarul
 ```
+![Results for task 6](images/lab6_6.JPG)
