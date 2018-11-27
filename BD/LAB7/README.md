@@ -2,20 +2,12 @@
 
 ## Tasks
 **1** Create the diagram of university database, that will include the following tables: Profesori, Studenti, Studenti_reusita, Grupe, Discipline 
+
 ![Results for task 1](images/lab7_1.JPG)
 
-**2**
-Modify the table named "grupe" according to the following conditions:
-* "Cod_Grupa" field should accept unique values and should not accept unknown values
-* Take in consideration that the primary key is already defined on *Id_Group* column
-```sql
-use universitatea
-go
+**2** Add the referential constraints with tables studenti and profesori for columns Sef_grupa and Prof_indrumator from table grupe
 
-alter table grupe alter column Cod_Grupa char(6) not null;
-
-alter table grupe add unique(Cod_Grupa)
-```
+![Results for task 2](images/lab7_2.JPG)
 
 **3**
 Add 2 columns: *Sef_Grupa* ; *Prof_Indrumator* of type Int, to the table named *grupe*. Populate the given column fields with values according to the following
