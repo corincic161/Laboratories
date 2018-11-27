@@ -1,14 +1,7 @@
 # Laboratory work nr. 7 by Sclifos Corina
 
 ## Tasks
-**1** Write a T-Sql instruction, that will populate the column "Adresa _ Postala _ Profesor" from table "profesori" with value "mun.Chisinau", where the column value is NULL 
-
-```sql
-use universitatea
-go
-
-update profesori Set Adresa_Postala_Profesor = 'mun.Chisinau' where Adresa_Postala_Profesor is NULL
-```
+**1** Create the diagram of university database, that will include the following tables: Profesori, Studenti, Studenti_reusita, Grupe, Discipline 
 ![Results for task 1](images/lab7_1.JPG)
 
 **2**
