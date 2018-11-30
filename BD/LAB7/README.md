@@ -9,86 +9,17 @@
 
 ![Results for task 2](images/lab7_2.JPG)
 
-**3**
-Add 2 columns: *Sef_Grupa* ; *Prof_Indrumator* of type Int, to the table named *grupe*. Populate the given column fields with values according to the following
-criteria:
-* *Seful_grupei* should have the best average mark from his group  on all disciplines and all types of evaluation.
-* *Prof_Indrumator* column should teach a maximum number of disciplines for this group. If there are more candidates that correspond to 
-this conditions, then get the teacher with the minimal Id from the teachers that correspond to the previous criteria. The values inthis columns should be unique
-* Write ALTER, INSERT, UPDATE instruction, necessary for creating the given fields, for selecting the corresponding candidates and  data insertion.
-```sql
-alter table grupe add Sef_grupa int, Prof_Indrumator int;
-```
-```sql
+**3** Add to the existing diagram from ex1, another table from your database: orarul 
 
-update grupe set Sef_grupa = (Select top 1 Id_Student
-				from studenti_reusita sr1
-				where grupe.Id_Grupa = sr1.Id_Grupa
-				group by Id_Student
-				order by ROUND(AVG(CAST(Nota AS FLOAT)), 2) desc)
+![Results for task 3](images/lab7_3.JPG)
 
-update grupe set Prof_Indrumator = (select top 1 Id_Profesor
-						from studenti_reusita sr2
-						where sr2.Id_Grupa = grupe.Id_Grupa
-						group by Id_Profesor
-						order by Count(Id_Disciplina) desc, Id_Profesor)
-select * from grupe
-```
-![Results for task 3](images/lab6_3.JPG)
+**4** The table should contain 2 secondar keys:(Zi,Ora, Id_Grupa, Id_Profesor) and (Zi, Ora , Id_Grupa, Id_Disciplina) 
 
-**4**
-Write a T-SQL instruction, that will increase the marks of all group-leads with one point 
-```sql
-use universitatea
-go
+![Results for task 4.1](images/lab7_4.1.JPG)
+![Results for task 4.2](images/lab7_4.2.JPG)
 
-update studenti_reusita set nota = nota + 1  where Id_Student in (Select Sef_grupa from grupe) and nota < 10
-select * from studenti_reusita
-```
-**5** Create a table named "profesori_new", with columns: Id_Profesor, Nume_Profesor, Prenume_Profesor, Localitate, Adresa_1, Adresa_2
-* Id_Profesor - primary key, CLUSTERED
-* Localitate - have default value mun.Chisinau
-* Insert data from table "profesori" to the new table,
-```sql
-create table profesori_new (
-	Id_Profesor int,
-	Nume_Profesor varchar(60),
-	Prenume_Profesor varchar(60),
-	Localitate varchar(60) default('mun.Chisinau'),
-	Adresa_1 varchar(60),
-	Adresa_2 varchar(60),
-	Primary key clustered(Id_Profesor));
-
-```
-```sql
-Insert into profesori_new(Id_Profesor, Nume_Profesor, Prenume_Profesor, Localitate, Adresa_1, Adresa_2)
-select Id_Profesor, Nume_Profesor, Prenume_Profesor,
-case 
-	when charindex('str.', Adresa_Postala_Profesor) > 0 then
-		SUBSTRING(Adresa_Postala_Profesor, 1, CHARINDEX(', str.', Adresa_Postala_Profesor) - 1)
-	when charindex('bd.', Adresa_Postala_Profesor) > 0 then 
-		SUBSTRING(Adresa_Postala_Profesor, 1, CHARINDEX(', bd.', Adresa_Postala_Profesor) - 1)
-	when charindex('mun.', Adresa_Postala_Profesor) > 0 then 
-		SUBSTRING(Adresa_Postala_Profesor, 1, len(Adresa_Postala_Profesor))
-end,
-
-case 
-	when charindex('str.', Adresa_Postala_Profesor) > 0 then
-		SUBSTRING(Adresa_Postala_Profesor, CHARINDEX(' str.', Adresa_Postala_Profesor)+1, patindex('%, [0-9]%', Adresa_Postala_Profesor) - CHARINDEX(', str.', Adresa_Postala_Profesor))
-	when charindex('bd.', Adresa_Postala_Profesor) > 0 then 
-		SUBSTRING(Adresa_Postala_Profesor, CHARINDEX(' bd.', Adresa_Postala_Profesor)+1, patindex('%, [0-9]%', Adresa_Postala_Profesor) - CHARINDEX(', bd.', Adresa_Postala_Profesor))
-end,
-
-case 
-	when patindex('%, [0-9]%', Adresa_Postala_Profesor) > 0 then 
-		SUBSTRING(Adresa_Postala_Profesor, patindex('%, [0-9]%', Adresa_Postala_Profesor) + 1, len(Adresa_Postala_Profesor) - patindex('%, [0-9]%', Adresa_Postala_Profesor) + 1)
-
-end
-
-from profesori
-select * from profesori_new
-```
-![Results for task 5](images/lab6_5.JPG)
+**5** In the diagram also should be shown the constraints (FK-PK) for atributes: Id_Disciplina, Id_Profesor and Id_Grupa between table orarul and tables discipline, profesori and grupe .(In the ex3 , I have already indicated those constraints) 
+![Results for task 5](images/lab7_3.JPG)
 
 **6** Insert the next data in "orar" table, for the group CIB171, with Id_Group = 1, for Monday. All lessons will take place in studies block 'B' 
 
