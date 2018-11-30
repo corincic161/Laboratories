@@ -70,7 +70,7 @@ select discipline.Disciplina, AVG(studenti_reusita.Nota) as Media from plan_stud
 	having AVG(studenti_reusita.Nota)>7
 	order by discipline.Disciplina DESC;
 ```
-![Results for task 7](LAB4/images/lab4_1.JPG)
+![Results for task 7](LAB4/images/lab4_25.JPG)
 
 **8** Write the queries necessary for creating te indexes on tables from "University" database to ensure a higher performance to the queries from laboratory work number 4. Analyse the results.
 The indexes must be physically placed into userdatafgroup file group 
