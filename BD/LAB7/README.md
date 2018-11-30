@@ -74,25 +74,25 @@ select discipline.Disciplina, AVG(studenti_reusita.Nota) as Media from plan_stud
 ![Results for task 7.2](https://github.com/corincic161/Laboratories/blob/master/BD/LAB4/images/lab4_23.JPG)
 ![Results for task 7.3](https://github.com/corincic161/Laboratories/blob/master/BD/LAB4/images/lab4_25.JPG)
 
-**8** Write the queries necessary for creating te indexes on tables from "University" database to ensure a higher performance to the queries from laboratory work number 4. Analyse the results.
-The indexes must be physically placed into userdatafgroup file group 
+**8** Create synonyms in order to simplify the queries from the previous exercise. 
 ```sql
+use universitatea
+go
+
 select Nume_Student , Adresa_Postala_Student, Id_Disciplina
-from studentii.studenti, studentii.studenti_reusita
+from studentii.st, studentii.nota_ev
 where Nota > 8 and Data_Evaluare like '%2018%';
 
-select grupe.Cod_Grupa, COUNT(DISTINCT studenti.Id_Student) from grupe
-	inner join studentii.studenti_reusita on grupe.Id_Grupa=studenti_reusita.Id_Grupa
-	inner join studentii.studenti on studenti_reusita.Id_Student=studenti.Id_Student
+select grupe.Cod_Grupa, COUNT(DISTINCT st.Id_Student) from grupe
+	inner join studentii.nota_ev on grupe.Id_Grupa=nota_ev.Id_Grupa
+	inner join studentii.st on nota_ev.Id_Student=st.Id_Student
 	group by grupe.Cod_Grupa
-	having COUNT(DISTINCT studenti.Id_Student) > 24;
+	having COUNT(DISTINCT st.Id_Student) > 24;
 
-select discipline.Disciplina, AVG(studenti_reusita.Nota) as Media from plan_studii.discipline
-	inner join studentii.studenti_reusita on discipline.Id_Disciplina=studenti_reusita.Id_Disciplina
+select d.Disciplina, AVG(nota_ev.Nota) as Media from plan_studii.d
+	inner join studentii.nota_ev on d.Id_Disciplina=nota_ev.Id_Disciplina
 	where Tip_Evaluare like '%Examen%'
-	group by discipline.Disciplina
-	having AVG(studenti_reusita.Nota)>7
-	order by discipline.Disciplina DESC;
+	group by d.Disciplina
+	having AVG(nota_ev.Nota)>7
+	order by d.Disciplina DESC;
 ```
-![Results for task 8](images/lab6_8.1plan1.JPG)
-![Results for task 8](images/lab6_8.1plan2.JPG)
