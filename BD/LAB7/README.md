@@ -21,28 +21,35 @@
 **5** In the diagram also should be shown the constraints (FK-PK) for atributes: Id_Disciplina, Id_Profesor and Id_Grupa between table orarul and tables discipline, profesori and grupe .(In the ex3 , I have already indicated those constraints) 
 ![Results for task 5](images/lab7_3.JPG)
 
-**6** Insert the next data in "orar" table, for the group CIB171, with Id_Group = 1, for Monday. All lessons will take place in studies block 'B' 
+**6** Modify 2-3 queries from laboratory nr.4, taking in considerations that table's schemas were changed  
 
 ```sql
-create table orarul (
-Id_Disciplina int,
-Id_Profesor int,
-Id_Grupa int,
-Ora time,
-Auditoriu int,
-Bloc char(1),
-Zi char(10)
-primary key(Id_Disciplina, Id_Profesor, Id_Grupa));
-```
-```sql
-insert into orarul (Id_Disciplina, Id_Profesor, Id_Grupa, Ora, Auditoriu, Bloc, Zi)
-values(107, 101, 1, '08:00', 202, 'B', 'Luni'),
-	  (108, 101, 1, '11:30', 501, 'B', 'Luni'),
-      (119, 117, 1, '13:00', 501, 'B', 'Luni')
+USE universitatea; 
+GO 
+ALTER SCHEMA cadre_didactice TRANSFER dbo.profesori; 
+GO 
 
-select * from orarul
+USE universitatea; 
+GO 
+ALTER SCHEMA plan_studii TRANSFER dbo.orarul; 
+GO 
+
+USE universitatea; 
+GO 
+ALTER SCHEMA studentii TRANSFER dbo.studenti; 
+GO 
+
+USE universitatea; 
+GO 
+ALTER SCHEMA studentii TRANSFER dbo.studenti_reusita; 
+GO 
+
+USE universitatea; 
+GO 
+ALTER SCHEMA plan_studii TRANSFER dbo.discipline
+GO 
 ```
-![Results for task 6](images/lab6_6.JPG)
+![Results for task 6](images/lab7_6.JPG)
 
 **7** Write T-SQL instructions neccessary for populating the "orar" table for INF171 group, for Monday.
 ```sql
