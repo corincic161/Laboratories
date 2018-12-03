@@ -70,24 +70,13 @@ go
 ![Results for task 4](images/lab8_4.JPG)
 
 **5** Write 2 queries from Chapter 4 that can be reduced as CTEs.
-![Results for task 5](images/lab7_3.JPG)
+![Results for task 5.1](images/lab8_5.JPG)
+![Results for task 5.2](images/lab8_5.2.JPG)
 
-**6** Modify 2-3 queries from laboratory nr.4, taking in considerations that table's schemas were changed  
-
+**6** 
 ```sql
 
 ```
 ![Results for task 6](images/lab7_6.JPG)
 
-**7** Modify 2-3 queries from laboratory nr.4, taking in considerations that table's schemas were changed 
-```sql
 
-```
-![Results for task 7.1](https://github.com/corincic161/Laboratories/blob/master/BD/LAB4/images/lab4_9.JPG)
-![Results for task 7.2](https://github.com/corincic161/Laboratories/blob/master/BD/LAB4/images/lab4_23.JPG)
-![Results for task 7.3](https://github.com/corincic161/Laboratories/blob/master/BD/LAB4/images/lab4_25.JPG)
-
-**8** Create synonyms in order to simplify the queries from the previous exercise. 
-```sql
-
-```
