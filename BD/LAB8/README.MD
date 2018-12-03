@@ -74,9 +74,8 @@ go
 ![Results for task 5.2](images/lab8_5.2.JPG)
 
 **6** 
-```sql
 
-```
-![Results for task 6](images/lab7_6.JPG)
+![Results for task 6](images/lab8_6.2.JPG)
+![Results for task 6](images/lab8_6.1.JPG)
 
 
