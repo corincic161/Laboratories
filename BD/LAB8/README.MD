@@ -39,16 +39,37 @@ Unfortunately, I was unable to execute these instructions because of the restric
 * A computation. The column cannot be computed from an expression that uses other columns. Columns that are formed by using the set operators UNION, UNION ALL, CROSSJOIN, EXCEPT, and INTERSECT amount to a computation and are also not updatable.
 * The columns being modified are not affected by GROUP BY, HAVING, or DISTINCT clauses.
 
-**3** Add to the existing diagram from ex1, another table from your database: orarul 
+**3** Modify the instructions created using the check option and schemabinding
+```sql
+drop VIEW if exists dbo.view_3
+go
 
-![Results for task 3](images/lab7_3.JPG)
+create view view_3 with schemabinding as
+select Nume_Student , Adresa_Postala_Student, Id_Disciplina
+from studentii.studenti, studentii.studenti_reusita
+where Nota > 8 and Data_Evaluare like '%2018%'
+with check option;
 
-**4** The table should contain 2 secondar keys:(Zi,Ora, Id_Grupa, Id_Profesor) and (Zi, Ora , Id_Grupa, Id_Disciplina) 
+go
+ select * from view_3
+```
+```sql
+create view view_2 with schemabinding as
+select discipline.Disciplina, AVG(studenti_reusita.Nota) as Media from plan_studii.discipline
+	inner join studentii.studenti_reusita on discipline.Id_Disciplina=studenti_reusita.Id_Disciplina
+	where Tip_Evaluare like '%Examen%'
+	group by discipline.Disciplina
+	having AVG(studenti_reusita.Nota)>7
+	with check option;
+go
+ select * from view_2
+```
 
-![Results for task 4.1](images/lab7_4.1.JPG)
-![Results for task 4.2](images/lab7_4.2.JPG)
+**4** Test new defined properties
 
-**5** In the diagram also should be shown the constraints (FK-PK) for atributes: Id_Disciplina, Id_Profesor and Id_Grupa between table orarul and tables discipline, profesori and grupe .(In the ex3 , I have already indicated those constraints) 
+![Results for task 4](images/lab8_4.JPG)
+
+**5** Write 2 queries from Chapter 4 that can be reduced as CTEs.
 ![Results for task 5](images/lab7_3.JPG)
 
 **6** Modify 2-3 queries from laboratory nr.4, taking in considerations that table's schemas were changed  
