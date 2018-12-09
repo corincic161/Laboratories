@@ -67,7 +67,7 @@ execute procedure_6 'Baze de date'
 ![Results for task 7](images/lab9_7.JPG)
 **8** 
 
-![Results for task 8](images/lab9_78.JPG)
+![Results for task 8](images/lab9_8.JPG)
 **9** 
 
 ![Results for task 9](images/lab9_9.JPG)
